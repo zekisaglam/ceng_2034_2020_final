@@ -1,0 +1,98 @@
+\documentclass[onecolumn]{article}
+%\usepackage{url}
+%\usepackage{algorithmic}
+\usepackage[a4paper]{geometry}
+\usepackage{datetime}
+\usepackage[margin=2em, font=small,labelfont=it]{caption}
+\usepackage{graphicx}
+\usepackage{mathpazo} % use palatino
+\usepackage[scaled]{helvet} % helvetica
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{subfigure}
+% Letterspacing macros
+\newcommand{\spacecaps}[1]{\textls[200]{\MakeUppercase{#1}}}
+\newcommand{\spacesc}[1]{\textls[50]{\textsc{\MakeLowercase{#1}}}}
+
+\title{\spacecaps{Assignment Report 2: Multiprocess Implementation}\\ \normalsize \spacesc{CENG2034, Operating Systems} }
+
+\author{Zeki Sağlam\\zzekisaglam@gmail.com}
+%\date{\today\\\currenttime}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The purpose of this assignment is to understand child and parent relationships and use multiprocessing.
+method.I downloaded
+some files with the function using child process from a given Array list.
+\end{abstract}
+
+
+\section{Introduction}
+This Assessment I compared many types of processes.I learned how to use it. 
+
+\section{Assignments}
+I started this task by taking the necessary libraries.
+
+
+\includegraphics[scale=0.40]{1.png}
+
+
+
+\subsection*{2.1. For Print parent id }
+
+Print parent id to screen.Create child process using fork.If pid of process is greater than 0 that means it is parent process.os.wait() method is used by a process to wait for completion of a child process.
+If pid of process is equal to 0 that means it is child process.Print child id to screen.
+
+
+\includegraphics[scale=0.40]{2.png}
+
+\subsection*{2.2With the child process, downloading the files via the given Array list}
+Requests.get method makes a request to a url, and return the status code. If status code equal to 200 that means url is working. 
+
+ Create a file named fille name. 
+ Print information and file name after that Print if url was not downloaded, and check for duplicates.The elements registered in the a list were checked with the multiprocess technique and the duplicate
+  
+   \includegraphics[scale=0.45]{3.png}
+    
+  \includegraphics[scale=0.45]{4.png}
+  
+ 
+ 
+ 
+ 
+\subsection*{2.3 Avoiding the orphan process situation}
+
+This time the problem was avoiding the orphan process situation. I added wait() for this, after
+the child but before the parent because I wanted my parent process to wait child to complete.We created child proccesses and with ”os.wait()” methods , avoid from orphan processes.
+
+
+
+\includegraphics[scale=0.45]{6.png}
+
+
+\section{Results}
+I got this output showing parent and child pids.
+It shows a list of downloaded files, the pids of the processes in the functions, duplicate files list and taken time.
+\includegraphics[scale=0.55]{Results.png}
+
+
+
+
+\section{Conclusion}
+I learned a lot with this task. One of the first things I learned; in multiprocessing, multiple processes or jobs can be run and managed by the CPU or a single program. 
+This Assignment was very instructive and made me understand how processes work.
+
+
+
+
+\section{My github}
+github.com/zekisaglam/
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
